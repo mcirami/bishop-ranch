@@ -1,0 +1,290 @@
+.header_section {
+	background-color: $lightGray;
+	padding: 40px 0;
+
+	.temp_12_header {
+    	@include span-columns(12);
+		clear: both;
+
+		.temp_half {
+			@include span-columns(6);
+			@include omega();
+
+	        ul {
+		        
+	        	li {
+	            	float: left;
+					list-style: none;
+					margin-bottom: 30px;
+					display: block;
+					width: 110px;
+	
+					img {
+	                	padding-bottom: 14px;
+						margin: auto;
+						display: block;
+						width: auto;
+	              	}
+	
+				  	a {
+				  		font-size: 14px;
+				  		text-align: center;
+	              	}
+	          	}
+	        }
+
+			.green_bttn {
+				float: right;
+        	}
+    	}
+
+		.header_content{
+			@include span-columns(12);
+			padding-bottom: 30px;
+    	}
+	}
+
+	.profile_container {
+	  width: 100%;
+	  background: $white;
+	  clear: both;
+	  padding: 20px 30px;
+
+	  .container_info {
+	  	@include span-columns(12);
+	  	border: 1px solid $buttonGreen;
+	  	width: 100%;
+	  	padding: 20px;
+	  	margin-bottom: 30px;
+
+        .member_img {
+        	@include span-columns(4);
+        }
+
+	        .member_content {
+	        	@include span-columns(8);
+	
+	          	.labels  {
+	            	@include garamond;
+					float: left;
+	
+	                li {
+	                	list-style: none;
+	                }
+	            }
+	
+	        	.label_info {
+	          		@extend .labels;
+			  		@include proximaNovaLight;
+			  		margin-left: 15%;
+	        	}
+        	}
+    	}
+
+	    .activities_container {
+		    
+		    .profile_bookings {
+			
+				h2.activities_header {
+					@include garamond;
+				}
+			}
+		    
+	        table {
+	        	@include span-columns(6);
+	        	@include clearfix;
+	        	border-collapse: collapse;
+	        	border: 1px solid $buttonGreen;
+	        	padding: 20px;
+	        	margin-top: 20px;
+	
+	            caption {
+	            	@include garamond;
+	            	font-size: 18px;
+	            	position: relative;
+	            	right: 26%;
+	            	padding: 0 0 20px 0;
+	            }
+	
+	            thead {
+	              @include proximaNovaLight;
+	              border-top: 1px solid #e1e1e1;
+	              border-bottom: 1px solid #e1e1e1;
+	
+	                tr {
+	                  padding: 10px 0;
+	
+	                    td {
+	                      width: 20%;
+	                    }
+	                }
+	            }
+	
+	            tbody {
+		            
+	            	tr {
+						padding: 20px 0;
+	
+						td {
+	                    	color: $linkGreen;
+							font-size: 15px;
+	                  	}
+	               	}
+	            }
+	        }
+	    }
+  	}
+}
+
+.top_row {
+	
+	.top_icons {
+		
+		@include media($mobile) {
+			text-align: center;
+		}
+
+		.top_icon {
+		
+			@include media($mobile) {
+				padding-right: 24px;
+				float: none;
+				display: inline-block;
+				
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	
+	.handbooks {
+		
+		@include media($mobile) {
+			position: relative;
+			text-align: center;
+            clear: both;
+		}
+	}
+}
+
+.profile_section {
+	  
+	.current_payment_methods {
+		
+		h2 {
+			display: none;
+		}
+		
+		.my-account-cim-payment-methods {
+			
+			thead {
+				display: none;
+			}
+			
+			td {
+				padding-bottom: 20px;
+				
+				&.cim-payment-method-exp-date {
+					
+					&:before {
+						content: 'Expires:';
+						padding-right: 5px;
+					}
+				}
+			}
+			
+			tr:last-child {
+				
+				td {
+					padding-bottom: 0;
+				}
+			}
+		}
+		
+		@include media($mobile) {
+			padding-right: 0 !important;
+		}
+	}
+	
+	.clear {
+		border: none;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+.woocommerce-page .wrapper #payment, #payment {
+	
+	input[type="radio"] {
+		width: 0;
+	}
+	
+	fieldset {
+		border: 1px solid #c0c0c0;
+		padding: 15px;
+		margin: 20px 0;
+	}
+	
+	.payment_box {
+		margin-top: 20px;
+		
+		&:after {
+			content: none;
+		}
+	}
+	
+	.form-row {
+		
+		label {
+			margin-right: 10px;
+		}
+		
+		label[for*="cvv"] {
+			margin-right: 14px;
+		}
+		
+		input[type="submit"] {
+			margin-top: 20px;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				float: none;
+			}
+		}
+		
+		input {
+			
+			width: 204px;
+			
+			@include media($mobile) {
+				display: block;
+			}
+		}
+		
+		.dd-container {
+			width: 100px !important;
+			float: none;
+			display: inline-block;
+			margin-bottom: 0;
+		}
+		
+		&.form-row-first {
+			
+			label {
+				padding-top: 5px;
+				float: left;
+				margin-right: 48px;
+				
+				@include media($mobile) {
+					float: none;
+					display: block;
+				}
+			}
+			
+			label[for*="routing"] {
+				margin-right: 17px;
+			}
+		}
+	}
+}

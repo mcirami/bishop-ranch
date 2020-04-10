@@ -1,0 +1,135 @@
+article.content_section {
+	
+	h3.subject_section_title {
+		@include proximaNovaLight;
+		font-size: 24px;
+		margin-top: 0;
+
+      @include media($mobile) {
+        font-size: 20px;
+      }
+	}
+
+	.subject_section {
+		@include clearfix;
+		background: $white;
+		padding: 30px;
+		height: 100%;
+		width: 100%;
+		margin-bottom: 22px;
+		border-bottom: 1px solid #d7d7d7;
+		
+		@include media($mobile) {
+			padding-top: 20px;
+			padding-bottom: 0;
+		}
+
+		ul {
+	    
+	    	li {
+	    		@include span-columns(3);
+				@include omega(4n);
+
+                @include media($mobile) {
+                  float: none;
+                  width: 100%;
+                }
+			
+				.subject_info {
+				  	width: 100%;
+				  	height: 30%;
+				  	padding-bottom: 25px;
+
+                    @include media($mobile) {
+                      @include span-columns(4);
+                      padding-bottom: 15px;
+                    }
+                    
+                    p {
+	                    font-size: 15px;
+	                    line-height: 1;
+                    }
+			
+				  	.subject_name {
+				        @include proximaNovaLight;
+				        font-size: 15px;
+				
+						p {
+			            	margin-top: 20px;
+			            	margin-bottom: 10px;
+			          	}
+		    	    }
+	    		}
+	    		
+	    		&.br_shadow {
+		    	
+			    	img {
+				    	border: solid 1px #e1e1e1;
+						-webkit-box-shadow: 0 5px 5px -5px #555555;
+						-webkit: 0;
+						-moz-box-shadow: 0 8px 6px -6px black;
+						box-shadow: -6 10px 6px -6px #555555;
+						-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=150, Color='#000000')";
+						filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=150, Color='#000000');
+			    	}
+		    	}
+	    	}
+
+			img {
+				border: 1px solid #efefef;
+                width: 100%;
+	    	}
+  		}
+	}
+}
+
+.content_container {
+	margin-bottom: 30px;
+	clear: both;
+}
+
+.template_13 {
+	
+	.sub_nav {
+		
+		a {
+			color: $buttonGreen;
+			
+			&:hover {
+				color: $textGray;
+			}
+			
+			&.current_page {
+		    	color: $textGray;
+		    	
+		    	&:hover {
+			    	color: $buttonGreen;
+		    	}
+	    	}
+    	}
+	}
+}
+
+.template_13a {
+	
+	@include media($mobile) {
+		padding-top: 0;
+	}
+	
+	.content_section {
+	
+		.subject_section {
+		
+			@include media($mobile) {
+				padding-bottom: 25px;
+			}
+		}
+	}
+	
+	.content_container {
+		
+		@include media($mobile) {
+			margin-bottom: 0;
+		}
+	}
+}

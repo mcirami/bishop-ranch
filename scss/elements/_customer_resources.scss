@@ -1,0 +1,270 @@
+.customer_resources {
+	
+	.page_title {
+		
+		@include media($mobile) {
+			//margin: 10px 0 20px;
+		}
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.box_content {
+		padding: 22px 30px 30px;
+		background-color: $white;
+		
+		@include media($mobile) {
+			padding: 14px 20px 20px;
+		}
+		
+		h2 {
+			@include proximaNovaLight;
+			padding-left: 40px;
+			font-size: 24px;
+			height: 40px;
+			line-height: 40px;
+			margin: 0 0 2px 0;
+		}
+		
+		p {
+			font-size: 15px;
+		}
+		
+		.box_content_bottom {
+			border-top: 1px solid $lightGray;
+			margin-top: 15px;
+			
+			ul {
+				@include clearfix;
+				list-style: none;
+				margin-top: 15px;
+				
+				li {
+					float: left;
+					padding-right: 25px;
+					background-image: none;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	
+	.hero_box {
+		@include span-columns(12);
+		border-bottom: 1px solid #d7d7d7;
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+	.two_column_boxes {
+		@include outer-container;
+		margin-top: 20px;
+		
+		@include media($tablet){
+			margin-top: 0px;
+		}
+		
+		.box_content {
+			height: 260px;
+			margin-bottom: 0;
+			
+			@include media($tablet) {
+				height: 310px;
+			}
+			
+			@include media($mobile) {
+				height: auto;
+			}
+		}
+		
+		.box_content_nolink {
+			height: 200px !important;
+			margin-bottom: 0px;
+
+            @include media($tablet) {
+              height: 230px !important;
+            }
+
+            @include media($mobile) {
+              height: auto !important;
+            }
+		}
+		
+		.box {
+			@include span-columns(6);
+			border-bottom: 1px solid #d7d7d7;
+			
+			@include media($tablet) {
+				@include span-columns(4);
+				//float: none;
+				margin-top: 20px;
+			}
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+			
+			&:last-child {
+				margin-right: 0px;
+			}
+			
+			img {
+              @include media($tablet) {
+                width: 100%;
+              }
+
+              @include media($mobile) {
+                width: 100%;
+              }
+				width: 460px;
+				height: auto;
+
+			}
+		}
+	}
+	
+	.three_column_boxes {
+		@include clearfix;
+		margin-top: 20px;
+		
+		.box_content {
+			height: 230px;
+			margin-bottom: 0;
+			
+			@include media($tablet) {
+				height: auto;
+			}
+			
+			p {
+				height: 120px;
+				
+				@include media($tablet) {
+					height: 100%;
+					border-bottom: 1px solid #f3f3f3;
+					margin-bottom: 15px;
+					padding-bottom: 20px;
+					height: 150px;
+					border-bottom: 1px solid #f3f3f3;
+					margin-bottom: 5px;
+					padding-bottom: 10px;
+				}
+				
+				@include media($mobile) {
+					height: auto;
+				}
+			}
+		}
+		
+		.box_content_nolink {
+			height: 190px;
+		}
+		
+		.box {
+			@include span-columns(4);
+			border-bottom: 1px solid #d7d7d7;
+			
+			@include media($tablet) {
+				@include span-columns(2.666667);
+				//float: none;
+				margin-bottom: 20px;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+			
+			&:last-child {
+				margin-right: 0px;
+			}
+			
+			h2 {
+				font-size: 20px;
+				
+				@include media($tablet){
+					font-size: 16px;
+					// line-height: 1;
+				}
+			}
+			
+			.box_content_bottom {
+				border: none;
+				margin-top: 0px;
+				
+				@include media($tablet) {
+					text-align: center;
+				}
+			}
+		}
+	}
+	
+	.links {
+		border-bottom: 1px solid #dcdcdc;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		
+		@include media($tablet){
+			border-bottom: none;
+		}
+		
+		&:first-child {
+			margin-top: 30px;
+			
+			@include media($mobile) {
+				margin-top: 10px;
+			}
+		}
+		
+		&:last-child {
+			border-bottom-width: 0;
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+			
+			p {
+				
+				@include media($mobile) {
+					border-bottom: none;
+				}
+			}
+		}
+
+        @include media($tablet) {
+          padding: 0 35px;
+        }
+		
+		@include media($mobile) {
+			@include span-columns(4);
+			margin-top: 8px;
+			margin-bottom: 4px;
+			padding: 0 25px;
+		}
+		
+		h2 {
+			@include proximaNovaLight;
+			font-size: 20px;
+			margin-top: 0;
+		}
+		
+		p {
+			@include media($tablet) {
+				padding-bottom: 20px;
+				border-bottom: 1px solid #dcdcdc;
+			}
+		}
+		
+		
+	}
+}

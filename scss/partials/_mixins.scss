@@ -1,0 +1,87 @@
+// mixins
+
+@mixin clearRow($nth) {
+	&:nth-child(#{$nth}+1) {
+		clear: both;
+	}
+}
+
+// Omega Reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Vertical Align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+@mixin proximaNova {
+	font-family: 'proxima-nova', Arial, sans-serif;
+	font-weight: 400;
+	// Light: 300
+	// Normal: 400
+	// Semi: 600
+	// Bold: 700
+}
+
+@mixin proximaNovaLight{
+	font-family: 'proxima-nova', Arial, sans-serif;
+	font-weight: 300;	
+}
+
+@mixin proximaNovaSemi{
+	font-family: 'proxima-nova', Arial, sans-serif;
+	font-weight: 600;	
+}
+
+@mixin proximaNovaBold{
+	font-family: 'proxima-nova', Arial, sans-serif;
+	font-weight: 700;
+}
+
+@mixin garamond {
+	font-family: 'adobe-garamond-pro';
+}
+
+@mixin green_buttn_arrow {
+    width: 260px;
+    height: 41px;
+    background-color: $buttonGreen;
+    background-image: url('../images/arrow_bttn.png');
+    background-repeat: no-repeat;
+    background-position: 80%;
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 1px 0px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 1px 0px 0px rgba(50, 50, 50, 0.5);
+
+    &:hover {
+      background-color: $linkGreen;
+    }
+}
+
+@mixin green_buttn {
+    width: 260px;
+    height: 40px;
+    background-color: $buttonGreen;
+    text-align: center;
+    color: $white;
+    border: 0;
+
+    &:hover {
+      background-color: $linkGreen;
+    }
+}

@@ -1,0 +1,42 @@
+.single_product {
+	
+	.wc-bookings-booking-form {
+		
+		input {
+			@include proximaNovaLight;
+			//font-weight: 300;
+		}
+	}
+
+	.wc-bookings-date-picker {
+		
+		.ui-widget-content {
+			box-shadow: none;
+		}
+		
+		.ui-datepicker-header {
+			border: 0;
+			background-image: none;
+			background-color: rgba(0, 0, 0, 0.5);
+			
+			.ui-datepicker-next {
+				background-color: rgba(0, 0, 0, 0.0);
+			}
+			
+			.ui-datepicker-prev {
+				background-color: rgba(0, 0, 0, 0.0);
+			}
+		}
+		
+		.ui-datepicker-calendar {
+			border: 0;
+			
+			td.bookable {
+				
+				a {
+					background-color: $buttonGreen !important;
+				}
+			}
+		}
+	}
+}

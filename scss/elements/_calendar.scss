@@ -1,0 +1,740 @@
+.calendar {
+	
+	.single_header {
+		
+		@include media($mobile) {
+			padding: 0;
+		}
+
+	}
+	
+	#tribe-events-header {
+		@include span-columns(12);
+		
+		@include media($mobile) {
+			margin-bottom: 0;
+		}
+		
+		.header_navigation {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 14px;
+			
+			@include media($mobile) {
+				background-color: $white;
+				position: relative;
+			}
+		}
+		
+		img	{
+			
+			@include media($mobile) {
+				width: 100%;
+			}
+		}
+	}
+	
+	#tribe-events-content {
+		
+		@include media($mobile) {
+			margin-bottom: 0;
+		}
+		
+		.event_filters {
+			@include span-columns(12);
+			background-color: $white;
+			border: 1px solid $linkGreen;
+			padding: 20px 30px 0;
+			margin-bottom: 30px;
+			
+			@include media($mobile) {
+				display: none;
+			}
+			
+			.filter {
+				display: inline-block;
+				float: left;
+				margin-right: 20px;
+				padding-bottom: 20px;
+				
+				a {
+					@include proximaNovaLight;
+					font-size: 15px;
+				}
+			}
+			
+			.clear_event_filters {
+				line-height: 36px;
+				margin-left: 12px;
+			}
+		}
+		
+		.mobile_event_filters {
+			display: none;
+			
+			@include media($mobile) {
+				display: block;
+			}
+			
+			.dd-container {
+				
+				@include media($mobile) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+		
+		@include media($mobile) {
+
+			.tribe-mobile-day-heading {
+				font-weight: 100;
+				margin: 0;
+			}
+			
+			.tribe-events-mobile {
+				padding-bottom: 20px;
+				border-bottom: 1px solid $borderGray;
+	
+				h4 {
+					font-weight: 300;
+					margin-top: 20px;
+					margin-bottom: 0;
+				}
+			}
+		}
+		
+        ul.tribe-events-sub-nav li.tribe-events-nav-next, li.tribe-events-nav-previous {
+          @include media($mobile) {
+            display: none;
+          }
+        }
+		.tribe-events-sub-nav {
+			
+			li {
+				
+				&.previous_button {
+					float: left;
+					
+					img {
+						height: 24px;
+						
+						&.previous_mobile {
+						display: none;
+						
+							@include media($mobile) {
+								display: block;
+							}
+						}
+						
+						&.previous_desktop {
+							
+							@include media($mobile) {
+								display: none;
+							}
+						}
+					}
+				}
+				
+				&.next_button {
+					float: right;
+					
+					img {
+						height: 24px;
+						
+						&.next_mobile {
+						display: none;
+						
+							@include media($mobile) {
+								display: block;
+							}
+						}
+						
+						&.next_desktop {
+							
+							@include media($mobile) {
+								display: none;
+							}
+						}
+					}
+				}
+				
+				a {
+					color: $white;
+					font-size: 24px;
+					@include proximaNovaLight;
+					font-weight: 100;
+					
+					@include media($mobile) {
+						color: $textGray;
+					}
+					
+					span {
+						display: none;
+					}
+					
+					&:hover {
+						color: $buttonGreen;
+					}
+				}
+				
+				&.current_month {
+					margin: 0 60px;
+					
+					a {
+						font-weight: 300;
+						
+						@include media($mobile) {
+							font-weight: 100;
+						}
+					}
+				}
+			}
+		}
+		
+		.tribe-events-calendar {
+			border: none !important;
+			background-color: $white;
+			box-shadow: 0 1px $borderGray;
+			margin-bottom: 40px !important;
+			
+			@include media($mobile) {
+				margin-bottom: 20px !important;
+			}
+			
+			thead {
+				
+				th {
+					font-size: 15px;
+					text-align: right;
+					@include proximaNovaLight;
+					color: $titleGray;
+					padding: 4px;
+					text-transform: capitalize;
+				}
+			}
+			
+			td {
+				border: none !important;
+				height: 130px !important;
+				
+				@include media($tablet) {
+					height: 105px !important;
+				}
+
+                @include media($mobile) {
+                  height: 0 !important;
+                }
+				
+				div[id*="tribe-events-daynum-"] {
+					text-align: right;
+					color: #a9b50b;
+					font-size: 20px;
+					@include proximaNovaLight;
+					position: absolute;
+					width: 100%;
+					padding: 6px 9px 20px 20px;
+
+                    @include media($mobile) {
+                      text-align: center;
+                      font-size: 14px;
+                    }
+				}
+				
+				h3.entry-title {
+					font-size: 14px !important;
+					line-height: 1.25;
+					@include proximaNovaLight; 
+					font-weight: 300 !important;
+					color: $titleGray !important;
+					
+					a {
+						font-size: 14px;
+					}
+
+	                @include media($mobile) {
+	                	display: none;
+	                }
+				}
+				
+				&.tribe-events-has-events {
+					cursor: pointer;
+				}
+				
+				&.tribe-events-thismonth {
+					
+					.day_content {
+						background-color: #f3f3f3;
+						margin: 0 4px !important;
+						height: 126px;
+						overflow: hidden;
+						//overflow-y: scroll;
+						//overflow-x: hidden;
+						
+						@include media($tablet) {
+							height: 99px;
+						}
+
+                        @include media($mobile) {
+                          height: 50px;
+                        }
+						
+						.filter_hidden_event {
+							display: none;
+						}
+						
+						&.active, &:hover {
+							background-color: #a9b50b;
+							
+							> *, a {
+								color: $white;
+							}
+						}
+						
+						.tribe_events {
+							padding-left: 2px;
+							padding-right: 26px;
+							
+							@include media($mobile){
+								border-bottom: 0px;
+							}
+						}
+					}
+				}
+				
+				&.tribe-events-othermonth {
+					
+					.day_content {
+						
+						.type-tribe_events {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		
+		.events_detail {
+			@include span-columns(12);
+			padding: 0 20px;
+			margin-bottom: 40px;
+			
+			@include media($mobile) {
+				margin-bottom: 20px;
+			}
+			
+			h2 {
+				font-size: 20px;
+				@include proximaNovaLight;
+				margin-bottom: 0;
+			}
+			
+			.day_event {
+				padding: 30px 0;
+				border-bottom: 1px solid $borderGray;
+				
+				&:last-child {
+					border: 0;
+				}
+				
+				@include media($mobile){
+					border: none;
+				}
+				
+				h3 {
+					color: $linkGreen;
+					font-size: 20px;
+					@include proximaNovaLight;
+					margin: 0 0 10px;
+					line-height: 1.25;
+				}
+				
+				p {
+					font-size: 15px;
+				}
+				
+				.event_description {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+.bookings_calendar_container, .wc-bookings-booking-form {
+	
+	.bookings_filter {
+		@include span-columns(12);
+		margin-bottom: 20px;
+		padding: 20px;
+		border: 1px solid $buttonGreen;
+		background-color: $white;
+		
+		#conference_room {
+			width: 33% !important;
+			margin-right: 1%;
+			
+			@include media($mobile){
+				width: 100% !important;
+				margin-right: 0px;
+				margin-bottom: 10px;
+			}
+		}
+		
+		#room_capacity {
+			width: 33% !important;
+			margin-left: 1%;
+			
+			@include media($mobile){
+				width: 100% !important;
+				margin-left: 0px;
+				margin-bottom: 10px;
+			}
+		}
+		
+		.dd-container {
+			clear: none;
+			margin-bottom: 0;
+			margin-top: 5px;
+		}
+		
+		button {
+			@include clearfix;
+			@include proximaNovaLight;
+			border: 0px;
+			background-color: $buttonGreen;
+			border-radius: 0px;
+			color: $white;
+			padding: 10px 35px;
+			font-size: 16px;
+			width: 30%;
+			margin-left: 1%;
+			
+			@include media($mobile) {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+
+
+    .cal_month {
+      display: none;
+
+      @include media($mobile) {
+        display: block;
+        padding: 14px;
+      }
+
+        p {
+          text-align: center;
+          font-weight: 300;
+          font-size: 24px;
+        }
+
+        a {
+          color: $textGray;
+        }
+    }
+	
+	.bookings_header {
+		@include span-columns(12);
+		
+		.header_navigation {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 14px;
+
+            @include media($mobile) {
+              background-color: transparent;
+              display: none;
+            }
+		}
+		
+		img {
+            max-width: 100%;
+        }
+		
+		.bookings_sub_nav {
+			list-style: none;
+            text-align: center;
+
+          li.bookings_nav_previous, li.bookings_nav_next {
+            @include media($mobile) {
+              display: none;
+            }
+          }
+			
+			li {
+				display: inline-block;
+				
+				&.previous_button {
+					float: left;
+					
+					img {
+						height: 24px;
+
+                        @include media($mobile) {
+                          display: none;
+                        }
+					}
+				}
+				
+				&.next_button {
+					float: right;
+					
+					img {
+						height: 24px;
+
+                      @include media($mobile) {
+                        display: none;
+                      }
+					}
+				}
+				
+				a {
+					color: $white;
+					font-size: 24px;
+					@include proximaNovaLight;
+					font-weight: 100;
+					
+					span {
+						display: none;
+					}
+					
+					&:hover {
+						color: $buttonGreen;
+					}
+				}
+				
+				&.current_month {
+					margin: 0 60px;
+					
+					a {
+						font-weight: 300;
+					}
+				}
+			}
+		}
+	}
+}
+
+.wc-bookings-booking-form {
+	@include span-columns(12);
+	padding: 0;
+	
+	.bookings_sub_nav {
+		@include span-columns(12);
+		text-align: center;
+		margin-bottom: 30px;
+		
+		li {
+			margin-right: 20px;
+		}
+		
+		a {
+			color: $titleGray !important;
+			font-size: 18px !important;
+		}
+	}
+}
+
+.time_filter {
+	@include span-columns(12);
+	border: 1px solid $linkGreen;
+	padding: 20px;
+	margin-bottom: 30px;
+	
+	select, .standard_btn {
+		@include span-columns(4);
+	}
+}
+
+.time_table {
+	@include span-columns(12);
+	background-color: $white;
+	padding: 20px;
+	border-bottom: 1px solid $borderGray;
+	
+	@include media($mobile){
+		border: none;
+	}
+	
+	.left_column {
+		@include span-columns(1);
+		
+		ul {
+			@include span-columns(12);
+			list-style: none;
+		}
+		
+		li {
+			@include span-columns(12);
+			height: 50px;
+			text-align: right;
+			//margin-bottom: 20px;
+		}
+	}
+	
+	.right_column {
+		@include span-columns(10.5);
+		@include shift(0.5);
+		padding-top: 10px;
+		
+		.bookable_time {
+			@include span-columns(2.4);
+			@include omega(5n);
+			background-color: #d2d2d2;
+			height: 44px;
+			margin-bottom: 6px;
+			
+			&.available_time {
+				background-color: #a9b50b;
+			}
+		}
+	}
+}
+
+.wc_bookings_calendar {
+	@include span-columns(12);
+	border: none !important;
+	background-color: $white;
+	box-shadow: 0 1px $borderGray;
+	margin-bottom: 40px !important;
+	
+	thead {
+		@include span-columns(12);
+		padding: 0 10px;
+		
+		tr {
+			@include span-columns(12);
+		}
+		
+		th {
+			@include span-columns(1.71);
+			font-size: 15px;
+			text-align: right;
+			@include proximaNovaLight;
+			color: $titleGray;
+			padding: 4px;
+			text-transform: capitalize;
+		}
+	}
+	
+	tbody {
+		@include span-columns(12);
+		padding: 10px;
+		
+		tr {
+			@include span-columns(12);
+			margin-bottom: 10px;
+		}
+	}
+	
+	td {
+		@include span-columns(1.81);
+		width: 13.4%;
+		margin-right: 1%;
+		border: none !important;
+		height: 116px !important;
+
+        @include media($mobile) {
+          height: 55px !important;
+        }
+		
+		.day_content {
+			background-color: #f3f3f3;
+			padding: 10px;
+			height: 116px;
+			cursor: pointer;
+
+            @include media($mobile) {
+              height: 55px;
+            }
+			
+			&.available_bookings {
+				background-color: #a9b50b;
+				
+				p {
+					color: $white;
+				}
+			}
+			
+			&.hide_availability {
+				background-color: #f3f3f3;
+				
+				p {
+					color: $linkGreen;
+				}
+			}
+		}
+		
+		&.calendar-diff-month {
+			.day_content {
+				&.available_bookings {
+					background-color: $lightGray;
+					
+					p {
+						color: $borderGray;
+					}
+				}
+			}
+		}
+		
+		p {
+			text-align: right;
+			color: #a9b50b;
+			font-size: 20px;
+			@include proximaNovaLight;
+			position: absolute;
+			width: 80%;
+
+            @include media($mobile) {
+              text-align: center;
+            }
+		}
+		
+		.bookings {
+			
+		}
+	}
+}
+
+#available_bookings_container {
+	@include span-columns(12);
+	
+	.bookable_product {
+		@include span-columns(12);
+		margin-bottom: 30px;
+		
+		.left_content {
+			@include span-columns(3);
+			@include shift(1);
+			
+			h3 {
+				margin: 0;
+			}
+			
+			a {
+				font-size: 18px;
+				@include proximaNovaLight;
+				margin: 0;
+			}
+		}
+		
+		.right_content {
+			@include span-columns(8);
+			border-bottom: 1px solid $borderGray;
+			padding-bottom: 30px;
+			
+			.standard_btn {
+				margin-top: 20px;
+			}
+		}
+	}
+}

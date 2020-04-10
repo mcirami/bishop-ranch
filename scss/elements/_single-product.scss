@@ -1,0 +1,172 @@
+.woocommerce {
+	
+	.product-type-booking {
+	
+		.product_title {
+			display: none;
+		}
+	}
+
+	section.single_product {
+	
+		div.summary {
+			@include span-columns(12);
+			
+			#wc-bookings-booking-form {
+				border: 0;
+			}
+			
+			.price {
+				color: #8b9414;
+			}
+			
+			p {
+				padding-bottom: 20px;
+			}
+		}
+	}
+	
+	.wc-bookings-booking-form {
+		
+		.form-field {
+			background-color: $white;
+			border: 1px solid $buttonGreen !important;
+			padding: 20px;
+		}
+		
+		fieldset {
+			background-color: $white;
+			border: 1px solid $buttonGreen !important;
+			padding: 20px;
+			
+			legend {
+				top: 27px;
+				padding-top: 16px;
+				border-top: 1px solid $buttonGreen;
+			}
+		}
+		
+		.product-addon {
+			background-color: $white;
+			border: 1px solid $buttonGreen !important;
+			padding: 20px;
+		}
+		
+		.block-picker {
+			
+			li {
+				
+				a {
+					
+					&.selected {
+						border-color: $buttonGreen;
+						color: $buttonGreen;
+					}
+				}
+			}
+		}
+		
+		.wc-bookings-booking-cost {
+			background: none;
+			margin: 0;
+			padding: 1em 0;
+		}	
+	}
+	
+	.wc-bookings-booking-form-button {
+		background: $buttonGreen !important;
+		border: none !important;
+		color: $white !important;
+		text-shadow: none !important;
+		font-weight: 300 !important;
+		padding: 10px 35px !important;
+		border-radius: 0 !important;
+		
+		&:hover {
+			background: $linkGreen !important;
+		}
+	}
+	
+	.return-to-shop {
+		display: none;
+	}
+}
+
+// Name your own price styling for automatic and manual payments
+.woocommerce {
+	.nyp-product {
+		
+		div.nyp {
+			@include clearfix;
+			padding: 20px;
+			background: $white;
+			border: 1px solid $buttonGreen;
+			
+			.minimum-price {
+				padding: 10px 0 0;
+			}
+		}
+		
+		.product-addon {
+			@include clearfix;
+			padding: 20px;
+			background: $white;
+			border: 1px solid $buttonGreen;
+		}
+		
+		form {
+			
+			label {
+				font-weight: normal;
+				
+				&[for="nyp"] {
+					font-weight: normal;
+				}
+			}
+			
+			input {
+				&.nyp-input {
+					font-weight: normal;
+				}
+			}
+			
+			h3 {
+				font-weight: normal;
+			}
+			
+			.form-row {
+				@include span-columns(6);
+				clear: none;
+				
+				&:nth-child(odd) {
+					margin-right: 0;
+				}
+			}
+			
+			button {
+				&[type="submit"] {
+					background: $buttonGreen;
+					border: 0;
+					color: $white;
+					text-shadow: none;
+					font-weight: normal;
+					padding: 10px 35px;
+					border-radius: 0;
+					box-shadow: none;
+					
+					&:hover {
+						background: #8B9414;
+						border: 0;
+						color: $white;
+						text-shadow: none;
+						font-weight: normal;
+						padding: 10px 35px;
+						border-radius: 0;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+		
+	}
+}

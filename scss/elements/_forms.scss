@@ -1,0 +1,759 @@
+.gfield_radio {
+  li {
+    float: left;
+    margin: 5px;
+    display: block;
+  }
+}
+
+.gform_wrapper .woocommerce-billing-fields {
+  margin: 0 !important;
+
+  input[type=text] {
+    font-size: 14px !important;
+  }
+
+  #input_1_23_3 {
+    width: 75px !important;
+  }
+
+
+  #input_1_31_3 {
+    @extend #input_1_23_3;
+  }
+
+  .gform_body {
+
+    label.gfield_label {
+      font-weight: normal;
+    }
+
+    .gsection_title {
+      @extend label.gfield_label;
+      font-size: 1em !important;
+    }
+  }
+
+  #field_1_14 {
+    margin-top: 15px;
+  }
+
+  ul li.gfield {
+    margin-bottom: 30px;
+  }
+
+  ul li.textform {
+    margin-bottom: 10px !important;
+  }
+
+  input[type=text] {
+    border: 1px solid #cdcdcd;
+    font-size: 15px;
+  }
+
+  input[type=tel] {
+    border: 1px solid #cdcdcd;
+    font-size: 15px;
+  }
+
+  textarea {
+    border: 1px solid #e5e5e5 !important;
+    font-size: 15px !important;
+  }
+}
+
+div#gform_wrapper_1 {
+  border: none !important;
+}
+
+.gform_wrapper {
+  h1,h2,h3,h4,p, label {
+    font-weight: 300 !important;
+  }
+
+  input.medium {
+    color: $titleGray;
+    font-weight: 300;
+  }
+
+  input[type=tel] {
+    border: 1px solid #cdcdcd;
+    font-size: 15px;
+  }
+
+  background: $white !important;
+  padding: 30px 30px !important;
+  border: 1px solid $buttonGreen;
+
+  ul {
+    padding-left: 0 !important;
+    
+    &.gform_fields {
+	    li {
+		    background-image: none;
+		    padding-left: 0;
+	    }
+    }
+    
+  }
+
+  h2.gsection_title {
+    font-size: 1.6rem !important;
+  }
+
+  .gfield_checkbox li label {
+    height: 30px;
+    margin-right: 100px !important;
+  }
+
+  div#input_7_30_3  {
+    width: 75px !important;
+  }
+
+  div#input_7_29_3{
+    @extend div#input_7_30_3;
+  }
+
+  div#input_7_63 {
+    @include media($mobile) {
+      width: 74% !important;
+    }
+  }
+
+  input#gform_submit_button_7 {
+    @include media($mobile) {
+      width: 221px;
+    }
+  }
+
+  div#input_7_17 {
+    @extend div#input_7_63;
+  }
+  
+	input[value='gf_other_choice'] {
+		display: none;
+	  
+		&::-webkit-input-placeholder {
+			color: #ababab;
+		}
+		
+		&:-moz-placeholder { /* Firefox 18- */
+			color: #ababab;  
+		}
+		
+		&::-moz-placeholder {  /* Firefox 19+ */
+			color: #ababab;  
+		}
+		
+		&:-ms-input-placeholder {  
+			color: #ababab;  
+		}
+	}
+  
+  input[value='Other'] {
+	  margin-left: 0 !important;
+	  color: #717171;
+	  font-size: 14px;
+  }
+  
+	.dd-container {
+		font-size: 14px;
+		width: 99% !important;
+		.dd-select {
+			background-color: #f8f8f8 !important;
+			color: $titleGray;
+			border-radius: 0;
+			.dd-selected {
+				padding: 2px 0px 2px 10px !important;
+				color: $titleGray;
+			}
+		}
+		.dd-option {
+			font-size: 14px;
+		}
+	}
+}
+
+.form_content, #customer_details {
+  background: $white;
+  padding: 30px 30px;
+  border: 1px solid $buttonGreen;
+
+  
+  h3 {
+	  margin-top: 0;
+	  margin-bottom: 15px;
+	  margin-left: 3px;
+  }
+  
+  p {
+	  
+	  &#billing_country_field {
+		 padding-bottom: 0;
+		 margin-bottom: 0; 
+	  }
+  }
+  
+  .input-text {
+	  padding: 20px;
+  }
+  
+  .chosen-container {
+	  
+	  .chosen-single {
+		  padding-left: 20px;
+	  }
+	  
+	  .chosen-results {
+		  
+		  li {
+			  padding: 5px 20px;
+		  }
+	  }
+  }
+  
+}
+
+.gfield_checkbox {
+  @extend .gfield_radio;
+}
+
+input[type=radio] {
+  opacity: 0;
+  float: left;
+  width: 18px;
+}
+
+input[type=checkbox] {
+  @extend input[type=radio];
+}
+
+input[type=text], input[type=tel], input[type=email] {
+  height: 33px !important;
+  font-size: 14px !important;
+
+  @include media($mobile) {
+    height: 35px !important;
+  }
+}
+
+input[type=radio] + label {
+  cursor: pointer;
+  background: url('../images/unchecked_square.png') left center no-repeat;
+  margin: 0 !important;
+  clear: none;
+  display: block;
+  padding: 5px 8px 4px 40px !important;
+  font-size: 14px;
+  //margin-right: 100px !important;
+}
+
+
+input[type=checkbox] + label {
+  cursor: pointer;
+  background: url('../images/unchecked_square.png') left center no-repeat;
+  margin: 0 5px 0 2px !important;
+  clear: none;
+  display: block;
+  padding: 5px 0 4px 40px !important;
+}
+
+.product-addon {
+	input[type=checkbox] {
+		width: 30px;
+		margin-right: 10px;
+		opacity: 1;
+		&:before {
+			content: '';
+			cursor: pointer;
+			background: url('../images/unchecked_square.png') left center no-repeat;
+			clear: none;
+			display: block;
+			height: 30px;
+			width: 30px;
+			float: left;
+		}
+	}
+	input[type=checkbox]:checked {
+		&:before {
+			content: '';
+			cursor: pointer;
+			background: url('../images/checked_square.png') left center no-repeat;
+			clear: none;
+			display: block;
+			height: 30px;
+			width: 30px;
+			float: left;
+		}
+	}
+}
+
+.gform_wrapper {
+  .top_label .gfield_label {
+    font-weight: 300 !important;
+  }
+}
+
+.grey_dropdown {
+  @include proximaNovaLight;
+  width: 300px;
+}
+
+input[type=radio]:checked + label {
+  background-image: url('../images/checked_square.png');
+}
+
+input[type=checkbox]:checked + label {
+  background-image: url('../images/checked_square.png');
+}
+
+input[type="submit"] {
+  @include green_buttn;
+}
+
+::-webkit-input-placeholder {
+  @include proximaNovaLight;
+  font-size: 14px !important;
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @include proximaNovaLight;
+  font-size: 14px !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  @include proximaNovaLight;
+  font-size: 14px !important;
+}
+
+:-ms-input-placeholder {
+  @include proximaNovaLight;
+  font-size: 14px !important;
+}
+
+input[type=text], textarea, input[type=email], input[type=phone], input[type=tel] {
+  background: #f8f8f8;
+  border: 1px solid #cdcdcd;
+}
+
+.cart {
+	
+	.coupon {
+		width: 100%;
+	}
+	
+	input {	
+		
+		&.button {
+			//@include span-columns(1.68);
+			color: $white;
+			font-weight: 300;
+			background: $buttonGreen;
+			border: none;
+			border-radius: 0;
+			width: inherit;
+			float: left !important;
+			width: 17% !important;
+			text-shadow: none;
+			
+			@include media($mobile) {
+				width: 100% !important;
+			}
+			
+			&:hover {
+				background: $linkGreen;
+			}
+		}
+		
+		&.checkout-button {
+			
+			&.button {
+				//@include span-columns(3.18);
+				background: $buttonGreen;
+				color: $white;
+				border: none;
+				width: 30% !important;
+				margin-top: 20px;
+				float: left;
+				border-radius: 0;
+				padding: 10px 35px;
+				text-shadow: none;
+				
+				&:hover {
+					background: $linkGreen;
+					color: $white;
+				}
+				
+				@include media($mobile) {
+					width: 100% !important;
+				}
+			}
+		}
+		
+		&#coupon_code {
+			//@include span-columns(1.44);
+			width: 12% !important;
+			margin-right: 8px;
+			margin-top: 5px;
+			display: inline-block;
+			
+			@include media($mobile) {
+				width: 100% !important;
+			}
+		}
+	}
+	
+	input[name*="update_cart"] {
+		display: none;
+	}	
+}
+
+.cart_totals {
+	
+	h2 {
+		
+		@include media($break768) {
+			text-align: right;
+		}
+	}
+	
+	table {
+		
+		@include media($break768) {
+			text-align: right;
+		}
+		
+		th {
+			width: 100% !important;
+			font-weight: 300;
+		}
+	}
+}
+
+
+
+.contact_form {
+  background-color: $white;
+  padding: 20px;
+}
+
+.dd-container {
+	width: 100% !important;
+
+	.dd-select {
+		height: 30px;
+		.dd-selected {
+			
+			@include media($tablet) {
+				//padding-left: 3px !important;
+			}
+		}
+	}
+}
+
+ul.dd-options.dd-click-off-close {
+  padding: 0 !important;
+}
+
+.woocommerce-billing-fields, .woocommerce-shipping-fields {
+  h3 {
+    font-weight: 400;
+  }
+  .form-row {
+    label {
+      font-weight: 300;
+    }
+
+    input[type=text], textarea {
+      background: #f8f8f8 !important;
+      border: 1px solid #e5e5e5;
+    }
+  }
+}
+
+.woocommerce-page {
+	
+	.checkout {
+		
+		.col2-set {
+			background: $white;
+			padding: 30px;
+			
+			.dd-select {
+				height: 42px;
+				
+				.dd-selected {
+					padding-top: 4px;
+				}
+			}
+		}
+	}
+	
+	#payment  {
+		background: $lightGray;
+		
+		label {
+			display: block !important;
+		}
+		
+		ul {
+			
+			&.payment_methods {
+				background: $white;
+				border-bottom: none;
+			}
+		}
+	  
+		fieldset {
+			border: none;
+			padding-left: 0;
+			margin-left: 0;
+		}
+
+		.form-row-last {
+			width: 100%;
+		}
+		  
+		.form-row {
+		  	margin-bottom: 0;
+		  	
+		  	&.form-row-first {
+		  		
+		  		label {
+					float: none;
+				}
+			}
+		    
+		  input[type=submit] {
+		    @include proximaNova;
+		    border: none;
+		    background: $buttonGreen;
+		    border-radius: 0;
+		    text-shadow: none;
+		    color: $white;
+		
+		    &:hover {
+		      background-color: $linkGreen;
+		    }
+		  }
+		}
+	
+	    li label[for='payment_method_authorize_net_cim'] img:nth-child(n+4) {
+	      margin-right: 10px;
+	    }
+	
+	    li label[for="payment_method_authorize_net_cim_echeck"] img:nth-child(n+1) {
+	      margin-right: 10px;
+	    }
+	    
+	    #place_order {
+		    float: left;
+	    }
+	    
+	    div.payment_box {
+		    background: none;
+		    box-shadow: none;
+		    padding-left: 0;
+		    
+		    p {
+			    
+			    &.form-row {
+					margin-bottom: 10px !important;
+			    }
+			    
+			    a {
+				    background: $buttonGreen;
+				    color: $white;
+				    padding: 10px 35px;
+				    font-weight: 300;
+				    border: none;
+				    border-radius: 0;
+				    text-shadow: none;
+				    
+				    &:hover {
+				      background-color: $linkGreen;
+				    }
+			    }
+
+                label {
+                  display: block !important;
+                  clear: both;
+                }
+		    }
+		    
+		    .form-row {
+			    padding-left: 0;
+		    }
+	    }
+  	}
+  	
+  	table {
+	  	
+	  	&.cart {
+		  	
+		  	th {
+			  	font-weight: 300;
+		  	}
+	  	}
+	  	
+	  	&.shop_table {
+		  	background: $white;
+		  	border-collapse: collapse !important;
+			border-radius: 0;
+
+			th {
+				font-weight: 300 !important;
+			}
+			
+			td {
+		  	
+			  	&.product-name {
+				  	
+				  	dl {
+					  	
+					  	&.variation {
+						  	
+						  	dt {
+							  	font-weight: 300;
+						  	}
+					  	}
+				  	}
+			  	}
+			 
+	  		}
+	  		
+	  		tfoot {
+		  		
+		  		td {
+			  		font-weight: 300;
+		  		}
+	  		}
+  		}
+  	}
+  	.woocommerce-message {
+	  	background: $white;
+	  	border: 1px solid $buttonGreen;
+	  	border-radius: 0;
+	  	box-shadow: none;
+	  	
+	  	a {
+		  	color: $white;
+		  	background: $buttonGreen;
+		  	font-weight: 300;
+		  	padding: 10px 35px;
+		  	border: none;
+		  	border-radius: 0;
+		  	text-shadow: none;
+		  	
+		  	&:hover {
+				background: $linkGreen;
+			}
+	  	}
+	  	
+	  	&:before {
+		  	background: none;
+		  	color: $buttonGreen;
+		  	box-shadow: none;
+	  	}
+  	}
+  	
+  	.woocommerce-error {
+	  	border: 1px solid $buttonGreen !important;
+	    background: $white;
+	    border-radius: 0;
+	    box-shadow: none;
+	    text-shadow: none;
+	    
+	    &:before {
+		  	background: none;
+		  	color: $buttonGreen;
+		  	box-shadow: none;
+	  	}
+    
+	  	li {
+		  	
+		  	strong {
+			  	color: #ff0000;
+			  	font-weight: bold;
+		  	}
+	  	}
+  	}
+  	
+  	form {
+	  	
+	  	.form-row {
+		  	
+		  	&.create-account {
+			  	
+			  	label {
+				  	
+				  	&.checkbox {
+					  	
+					  	display: block
+				  	}
+			  	}
+		  	}
+	  	}
+  	}
+}
+
+.woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info {
+    border: 1px solid $buttonGreen !important;
+    background: $white;
+    border-radius: 0;
+    box-shadow: none;
+
+    &:before {
+      content: none;
+    }
+  }
+.woocommerce #payment ul.payment_methods li img, .woocommerce-page #payment ul.payment_methods li img {
+  float: left;
+  padding-left: 9px;
+  padding-top: 7px;
+
+}
+
+div#billing_country_chosen, div#shipping_country_chosen {
+  display: none;
+}
+
+.woocommerce form .form-row label, .woocommerce-page form .form-row label {
+  font-weight: 300;
+}
+
+.woocommerce-checkout .form-row .chosen-container {
+  display: none;
+}
+
+#payment {
+  label {
+    display: inline-block !important;
+
+    img {
+      float: left;
+      padding-left: 8px;
+    }
+
+    img:nth-child(n+4) {
+      margin-right: 10px;
+    }
+  }
+
+  label[for="payment_method_authorize_net_cim_echeck"] img:nth-child(n+1) {
+      margin-right: 10px;
+
+  }
+}
+
+li#field_7_61 {
+  margin-bottom: 15px;
+}
+
+.wrapper .gform_wrapper li.gfield div.ginput_container ul.gfield_checkbox li, .wrapper .gform_wrapper li.gfield div.ginput_container ul.gfield_radio li {
+	
+	@include media($mobile) {
+		@include span-columns(12);
+	}
+}

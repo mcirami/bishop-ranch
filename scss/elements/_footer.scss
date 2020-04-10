@@ -1,0 +1,364 @@
+.login_form {
+	
+	.fancybox-skin {
+		border-radius: 0px;
+		box-shadow: none !important;
+		
+		.fancybox-close {
+			display: none;
+		}
+	}
+}
+
+#login {
+	display: none;
+	max-width: 290px;
+	width: 100%;
+	
+	.col-1 {
+		width: 100%;
+		border-bottom: 1px solid $lightGray;
+		padding-bottom: 2em;
+		
+		h2 {
+			font-size: 18px;
+			color: $textGray;
+		}
+	}
+	
+	.col-2 {
+		width: 100%;
+		padding-top: 1em;
+		
+		h2 {
+			font-size: 18px;
+			color: $textGray;
+		}
+	}
+	
+	form {
+		border: none;
+		padding: 0;
+		margin: 0;
+		
+		.form-row {
+			padding: 0;
+		}
+		
+		#rememberme {
+			height: 3px;
+		}
+		
+		input[type=checkbox] + label {
+			margin: 0 !important;	
+		}
+		
+		p {
+			@include proximaNovaLight;
+			color: $textGray;
+			font-weight: 400;
+			font-size: 15px;
+			
+			&.lost_password {
+				margin-bottom: 10px;
+			}
+			
+			&.login_bottom_text {
+				line-height: 1.2;
+				margin-bottom: 10px;
+			}
+		}
+		
+		input.button {
+			text-shadow: none;
+		}
+		
+		input[type="text"] {
+			border: 1px solid #e5e5e5 !important;
+			background-color: #f8f8f8 !important;
+			padding: 4px 0px;
+		}
+		
+		input[type="password"] {
+			border: 1px solid #e5e5e5 !important;
+			background-color: #f8f8f8 !important;
+			padding: 4px 0px;
+		}
+		
+		input[type="email"] {
+			border: 1px solid #e5e5e5 !important;
+			background-color: #f8f8f8 !important;
+			padding: 4px 0px;
+		}
+		
+		input[type=submit] {
+			font-family: 'proxima-nova', Arial, sans-serif;
+			font-weight: 300;
+			border: 0px;
+			background: #a9b50b !important;
+			border-radius: 0px !important;
+			text-shadow: none !important;
+			color: #fff;
+			padding: 10px 35px;
+			font-size: 14px;
+			box-shadow: none;
+			width: 100%;
+		}
+		
+		input[type="checkbox"] {
+			cursor: pointer;
+			background: url("../images/unchecked_square.png") left center no-repeat;
+			margin: 0;
+			clear: both !important;
+			display: block;
+			padding: 20px 0px 10px 0px !important;
+		}
+		
+		input[type="checkbox"]:checked {
+			background-image: url('../images/checked_square.png');
+		}
+		
+		label.inline {
+			display: block;
+			clear: both;
+		}
+	}
+}
+
+#global_footer {
+	min-height: 190px;
+	
+	.breadcrumbs {
+		@include clearfix;
+		margin-top: 35px;
+		margin-bottom: 10px;
+		
+		ul {
+			list-style: none;
+			
+			li {
+				float: left;
+				
+				p {
+					color: $textGray;
+				}
+			}
+		}
+		
+		@include media($mobile) {
+			margin-top: 18px;
+		}
+	}
+	
+	.footer_content {
+		border-top: 2px solid $buttonGreen;
+		padding-top: 25px;
+		
+		.footer_left {
+			@include span-columns(7);
+			
+			@include media($tablet){
+				@include span-columns(4);
+				margin-right: 0;
+			}
+			
+			@include media($mobile){
+				@include span-columns(4);
+				margin-bottom: 40px;
+				margin-top: 20px;
+			}
+			
+			span {
+				@include media($mobile){
+					display: block;
+					clear: both;
+				}
+			}
+			
+			.ft_logo {
+				float: left;
+				margin-right: 15px;
+				margin-top: 7px;
+				
+				@include media($tablet){
+					margin-bottom: 5px;
+				}
+				
+				@include media($mobile){
+					width: 100%;
+				}
+			}
+			
+			.content_left {
+				float: left;
+				
+				@include media($mobile){
+					margin-top: 5px;
+				}
+				
+				p {
+					font-size: 12px;
+					line-height: 2.0;
+				}
+			}
+			
+			.copyright {
+				font-size: 12px;
+				display: inline-block;
+				vertical-align: top;
+				line-height: 2;
+				float: left;
+				
+				@include media($mobile){
+					margin-top: 15px;
+				}
+				
+				a {
+					border-left: 1px solid $titleGray;
+					margin-left: 10px;
+					padding-left: 10px;
+				}
+			}
+		}
+		
+		.footer_right {
+			@include span-columns(5);
+			float: right;
+			margin-right: 0;
+			
+			@include media($tablet){
+				@include span-columns(4);
+				float: right;
+				margin-right: 0;
+			}
+			
+			@include media($mobile){
+				@include span-columns(4);
+			}
+			
+			.social_icons {
+				@include clearfix;
+				
+				ul {
+					list-style: none;
+					float: right;
+					
+					@include media($mobile){
+						float: left;
+					}
+					
+					li {
+						display: inline-block;
+						padding-right: 10px;
+						
+						&:last-child {
+							padding-right: 0px;
+						}
+					}
+				}
+			}
+			
+			.news_signup {
+				float: left;
+				width: 100%;
+				
+				.gform_wrapper {
+					max-width: 100%;
+					padding: 0 !important;
+				}
+
+                #gform_wrapper_2 {
+                  background: none !important;
+                  padding: 0 !important;
+                  border: none !important;
+                }
+				
+				input[type="email"] {
+					padding: 6px 8px 7px 8px;
+					width: 100%;
+					font-size: 13px;
+					
+					@include media($mobile){
+                    	padding: 9px;
+                    	border-radius: 0;
+						border: 1px solid #ccc;
+						box-shadow: none;
+						box-sizing: border-box;
+                    }
+				}
+				
+				::-webkit-input-placeholder {
+				   font-size: 13px !important;
+				   color: $textGray;
+				}
+				
+				:-moz-placeholder { /* Firefox 18- */
+				   font-size: 13px !important;
+				   color: $textGray;
+				}
+				
+				::-moz-placeholder {  /* Firefox 19+ */
+				   font-size: 13px !important;
+				   color: $textGray;
+				}
+				
+				:-ms-input-placeholder {  
+				   font-size: 13px !important;
+				   color: $textGray;
+				}
+				
+				.gform_body {
+					width: 70%;
+					float: left;
+					display: inline-block;
+				}
+				
+				.gform_footer  {
+					width: 30%;
+					padding: 0;
+					margin: 0;
+					float: right;
+					display: inline-block;
+					clear: none;
+				
+					.top_label {
+						position: relative;
+	                    bottom: 79px;
+	                    left: 70%;
+					}
+				
+					input[type="submit"] {
+						-webkit-appearance: none;
+						background: #a9b50b;
+						text-shadow: none !important;
+						border: 0px;
+						font-weight: 400;
+						border-radius: 0px;
+						width: 100%;
+						color: white;
+	                    padding: 0px 20px;
+	                    height: 33px;
+	                    font-size: 13px;
+	                    
+	                    &:hover {
+							background: $linkGreen;
+	    				}
+
+                        @include media($mobile) {
+                          height: 35px;
+                        }
+					}
+				
+				}
+			}
+		}
+	}
+}
+
+// Payment Pg
+
+.shop_table {
+  .nobr {
+    font-weight: 200;
+  }
+}

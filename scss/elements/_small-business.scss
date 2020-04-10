@@ -1,0 +1,228 @@
+.available_spaces {
+	
+	@include media($mobile) {
+		border-top: none;
+	}
+	
+	.left_calc, .right_calc {
+		@include span-columns(6);
+		border: 1px solid $linkGreen;
+		padding: 20px;
+		background-color: $white;
+		min-height: 100%;
+		display: table-cell;
+		height: 100%;
+		float: none;
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+		
+		h3 {
+			font-size: 18px;
+			@include proximaNovaLight;
+			margin: 0 0 20px;
+		}
+		
+		ul {
+			@include span-columns(12);
+			list-style: none;
+			margin-bottom: 50px;
+			padding-left: 0 !important;
+			
+			li {
+				@include span-columns(12);
+				//margin-bottom: 10px;
+				
+				p {
+					@include span-columns(8);
+					@include proximaNovaLight;
+					font-size: 15px;
+				}
+				
+				.dd-container {
+					@include span-columns(4);
+					width: 31% !important;
+					clear: none;
+					
+					.dd-select, .dd-options {
+						width: 100% !important;
+						padding-left: 0;
+						
+						.dd-selected {
+							
+							@include media($tablet) {
+								padding-left: 20px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		 .checkboxes {
+			margin-bottom: 20px;
+			
+			@include media($mobile) {
+				margin-bottom: 75px;
+			}
+		}
+		
+		.calc_buttons {
+			@include span-columns(12);
+			padding: 0 20px;
+			position: absolute;
+			left: 0px;
+			bottom: 20px;
+			
+			@include media($tablet) {
+				text-align: center;
+				padding-left: 0;
+				padding-right: 22px;
+			}
+		}
+		
+		.clear_results {
+			float: left;
+			line-height: 40px;
+			
+			@include media($tablet){
+				float: none;
+			}
+		}
+		
+		button {
+			//@include clearfix;
+			@include proximaNovaLight;
+			border: 0px;
+			background-color: $buttonGreen;
+			border-radius: 0px;
+			color: $white;
+			padding: 10px 35px;
+			font-size: 16px;
+			float: right;
+			
+			@include media($tablet){
+				padding: 8px 20px;
+			}
+		}
+	}
+	
+	.right_calc {
+		@include omega();
+		
+		@include media($mobile) {
+			display: block;
+			margin-top: 10px;
+		}
+	}
+	
+	.calc_spacer {
+		display: table-cell;
+		width: 2.35765%;
+	}
+	
+	.or_button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 40px;
+		height: 40px;
+		border: 1px solid $linkGreen;
+		border-radius: 50%;
+		background-color: $white;
+		margin-left: -20px;
+		text-align: center;
+		display: table-cell;
+		
+		@include media($mobile) {
+			top: 55%;
+		}
+		
+		p {
+			line-height: 36px;
+		}
+	}
+}
+
+.small_business_features {
+
+	.features {
+		
+		@include media($mobile) {
+			
+		}
+		
+		img {
+			
+			@include media($mobile) {
+				height: 150px;
+			}
+		}
+		
+		.listing_summary {
+			@include media($mobile) {
+				margin-left: 8%;
+			}
+			
+			@include media($mobile) {
+				padding-top: 0;
+			}
+			
+			.right_content {
+				
+				@include media($tablet) {
+					width: 76.1%;
+				}
+				
+				@include media($mobile) {
+					padding-right: 20px;
+					padding-bottom: 25px;
+					//margin-right: 19%;
+					border-bottom: 1px solid #dcdcdc;
+				}
+				
+				p {
+					@include media($mobile) {
+						margin-bottom: 20px;
+					}
+				}
+			}
+			
+			.small_bus_calc {
+				
+				.right_content {
+					
+					@include media($tablet) {
+						width: 76.1%;
+					}
+					
+					@include media($mobile) {
+						text-align: left;
+						margin-left: 5%;
+					}
+				}
+				
+				.garamond {
+					
+					@include media($tablet) {
+						@include span-columns(2);
+						margin-right: 10px;
+					}
+					
+					@include media($mobile) {
+						@include span-columns(4);
+						text-align: left;
+					}
+					
+					.complex {
+						
+						@include media($mobile) {
+							width: 20%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,439 @@
+.single_header {
+	margin-bottom: 20px;
+
+    @include media($mobile) {
+      padding: 0;
+      margin-bottom: 0;
+    }
+    
+    .page_title {
+	    margin-top: 0;
+	    line-height: 24px;
+	    padding-top: 25px;
+	    margin-bottom: 20px;
+    }
+	
+	h3 {
+		margin: 0;
+		@include proximaNovaLight;
+		font-size: 15px;
+	}
+	
+	.title_divider {
+		margin: 0 10px;
+	}
+	
+	.second_line {
+		
+		.byline {
+			float: left;
+		}
+		
+		.publish_date {
+			float: right;
+		}
+	}
+	
+	.standard_btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	
+	.add_to_calendar {
+		cursor: pointer;
+		color: $linkGreen;
+		vertical-align: top;
+		margin-top: -2px;
+		
+		.fa {
+			margin-left: 10px;
+			color: $titleGray;
+		}
+	}
+	
+	.feeds {
+		display: inline-block;
+		padding-right: 20px;
+		
+		a {
+			&:before {
+				content: '';
+				background: url('../images/RSS-icon.png') center no-repeat;
+				width: 25px;
+				height: 24px;
+				float: left;
+			}
+		}
+	}
+	
+	.tribe-events-cal-links {
+		margin-bottom: 0;
+		
+		.calendar_links {
+			display: none;
+			background-color: $white;
+			padding: 10px 20px;
+			position: absolute;
+			z-index: 1;
+			width: 200%;
+			
+			a {
+				display: block;
+			}
+		}
+		
+		&:hover {
+			
+			.calendar_links {
+				display: block;
+			}
+		}
+	}
+}
+
+.single_post {
+	@include span-columns(12);
+
+    @include media($mobile) {
+      padding: 20px 0 20px;
+    }
+	
+	.main_image {
+		@include span-columns(12);
+		margin: 10px 0 40px;
+		
+		@include media($mobile) {
+			margin: 0 0 15px; 
+		}
+		
+		img {
+			display: block;
+			width: 100%;
+            height: auto;
+		}
+		
+		h3 {
+			padding: 20px;
+			line-height: 20px;
+			font-size: 15px;
+			@include proximaNovaLight;
+			background-color: $white;
+			margin: 0;
+			border-bottom: 1px solid $borderGray;
+		}
+	}	
+	
+	.post_content {
+		@include span-columns(11);
+		@include shift(1);
+
+        @include media($mobile) {
+          margin-left: 0;
+        }
+		
+		> h2 {
+			padding-bottom: 30px;
+			border-bottom: 1px solid $borderGray;
+			font-size: 24px;
+			@include proximaNovaLight;
+			line-height: 1.25;
+			-webkit-font-smoothing: antialiased;
+			
+			@include media($mobile) {
+				font-size: 18px;
+				padding-bottom: 20px;
+			}
+		}
+		
+		ul {
+			li {
+				list-style-type: none;
+				padding-left: 10px;
+				background: url('../images/tiny-ul-dot.png') 0 10px no-repeat;
+			}
+		}
+	}
+	
+	.post_section {
+		@include span-columns(12);
+		padding-top: 30px;
+		
+		@include media($mobile) {
+			padding-top: 15px;
+		}
+		
+		.section_left {
+			@include span-columns(3);
+			
+			h3 {
+				margin: 0;
+				font-size: 18px;
+				
+				@include media($mobile) {
+					margin-bottom: 15px;
+				}
+			}
+			
+			@include media($mobile) {
+				width: 100%;
+			}			
+		}
+		
+		.section_right {
+			@include span-columns(9);
+			//@include shift(1);
+			border-bottom: 1px solid $borderGray;
+			padding-bottom: 30px;
+			
+			@include media($mobile) {
+				padding-bottom: 15px;
+			}
+			
+			.white_box {
+				@include clearfix;
+				padding: 30px;
+				background-color: $white;
+				
+				ol {
+					list-style-position: inside;
+					margin-top: 20px;
+				}
+				
+				p {
+					margin-top: 20px;
+					
+					&:first-child {
+						margin-top: 0px;
+					}
+				}
+			}
+			
+			.gform_wrapper {
+				max-width: 100%;
+				margin: 0;
+				padding: 20px !important;
+			}
+			
+			.standard_btn {
+				margin-top: 20px;
+			}
+			
+			h3 {
+				@include proximaNovaLight;
+				font-size: 18px;
+				margin: 0;
+				line-height: 1.4;
+			}
+			
+			strong {
+	            font-weight: normal;
+            }
+			
+			@include media($mobile) {
+				width: 100%;
+				
+				@include media($mobile) {
+					margin-left: 0;
+				}
+			}
+			
+			ul {
+				list-style-position: outside;
+				//padding-left: 30px;
+			}
+			
+			p {
+				margin-bottom: 20px;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+            #gform_fields_3 {
+              li {
+                margin-bottom: 30px;
+              }
+            }
+		}
+		
+		&:last-child {
+			
+			.section_right {
+				border: 0;
+			}
+		}
+	}
+	
+	.press_content {
+		@include span-columns(8);
+		@include shift(4);
+
+        @include media($mobile) {
+          width: 100%;
+          float: none;
+          margin-left: 0;
+        }
+		
+		//border-bottom: 1px solid $borderGray;
+		
+		.caption_image {
+			margin-bottom: 20px;
+		}
+		
+		p {
+			margin-bottom: 20px;
+		}
+
+        .tags_border {
+          border-top: 1px solid #dcdcdc;
+          padding-top: 30px;
+        }
+        
+        ul {
+	        margin-bottom: 10px;
+			li {
+				list-style-type: none;
+				padding-left: 10px;
+				background: url('../images/tiny-ul-dot.png') 0 10px no-repeat;
+			}
+		}
+	}
+}
+
+.template_8 {
+	
+	.single_post {
+		
+		@include media($mobile) {
+			padding: 0;
+		}
+		
+		.main_image {
+			
+			@include media($mobile) {
+				margin: 0;
+			}
+		}
+	}
+	
+	.post_section {
+		
+		@include media($mobile) {
+			border-bottom: 1px solid #dcdcdc;
+			padding-top: 15px;
+		}
+		
+		.section_left {
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				margin-bottom: 0;
+				padding-right: 7%;
+			}
+		}
+		
+		.section_right {
+			
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+			
+			@include media($mobile) {
+				border-bottom: none;
+				width: 100%;
+				padding-bottom: 20px;
+			}
+			
+			ul {
+	
+				li {
+					
+					&:last-child {
+						
+						p {
+							@include media($mobile) {
+								margin-bottom: 10px;
+							}
+						}
+					}
+					
+					ul {
+						padding-left: 40px;
+						padding-top: 10px;
+						
+						@include media($mobile) {
+							padding-top: 0;
+						}
+					}
+				}
+			}
+		}
+		
+		.gform_wrapper {
+			
+			@include media($mobile) {
+				padding-right: 6%;
+			}
+			
+			input.medium {
+				
+				@include media($mobile) {
+					width: 100%;
+				}
+			}
+		}
+		
+		.textarea {
+		
+			&#input_4_4 {
+			
+				@include media($mobile) {
+					width: 100%;
+				}
+			}
+		}
+		
+	}
+	
+	.post_content {
+		
+		@include media($mobile) {
+			margin-left: 0;
+			width: 100%;
+		}
+		
+		h2 {
+			
+			@include media($mobile) {
+				padding-top: 18px;
+			}
+		}
+	}
+	
+	li#field_4_2 {
+		
+		@include media($mobile) {
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	li#field_4_3 {
+		
+		@include media($mobile) {
+			float: none;
+			width: 100%;
+		}
+	}
+	
+	div#input_4_1 {
+		
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+}

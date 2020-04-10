@@ -1,0 +1,143 @@
+article.content_section {
+  h3.page_title {
+    @extend .subject_section_title;
+
+    @include media($mobile) {
+      text-align: center;
+    }
+  }
+}
+
+  .subject_section {
+	  
+    ul {
+	    @include clearfix;
+	    
+		li {
+	    	
+	    	&:nth-child(4n+1) {
+	        	clear: both;
+	      	} 
+		}
+    }
+
+    .content_container {
+      @include span-columns(7);
+      @include omega();
+      clear: both;
+      padding-right: 57px;
+
+      @include media($mobile) {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+      }
+
+        p {
+          padding-bottom: 20px;
+        }
+    }
+
+    .download_section {
+      @include span-columns(5);
+      border: 1px solid $buttonGreen;
+      padding: 20px 30px;
+
+      @include media($mobile) {
+        float: none;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      h4 {
+        @include garamond;
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 0;
+        
+        @include media($mobile) {
+        	margin-bottom: 12px;
+        }
+      }
+
+      ul {
+        li {
+          float: none !important;
+          width: 200px !important;
+          list-style: none;
+        }
+      }
+    }
+  }
+
+
+.green_bttn  {
+  //@include green_buttn_arrow;
+  float: left;
+  text-align: center;
+  clear: both;
+
+  @include media($tablet) {
+    clear: both;
+  }
+
+  @include media($mobile) {
+    float: none;
+    text-align: left;
+    font-size: 10px;
+    width: 100%;
+  }
+
+    p {
+      line-height: 41px;
+      color: $white;
+      padding-bottom: 0 !important;
+      margin-right: 50px;
+    }
+    
+    a {
+       @include media($mobile) {
+         width: 100%;
+       }
+		
+		p {
+			float: left;
+			vertical-align: middle;
+			margin-right: 10px;
+			line-height: 26px;
+
+          @include media($mobile) {
+            font-size: 14px;
+          }
+		}
+		
+		img {
+			float: left;
+		}
+	}
+}
+
+.title_container {
+  @include span-columns(12);
+
+  .half {
+    @include span-columns(6);
+
+    @include media($mobile) {
+      width: 100%;
+    }
+
+    .green_bttn {
+      float: right;
+      text-align: center;
+
+      /*p {
+        @include proximaNovaLight;
+        font-size: 18px;
+        margin-right: 10px;
+      }*/
+
+    }
+  }
+}
+

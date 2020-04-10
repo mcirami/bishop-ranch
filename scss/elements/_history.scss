@@ -1,0 +1,188 @@
+.alt_title {
+	margin-top: 30px;
+	
+	@include media($mobile) {
+		margin-top: 18px;
+	}
+}
+
+.history {
+	
+	@include media($mobile) {
+		padding-bottom: 25px;
+	}
+}
+
+.featured_timeline {
+	@include clearfix;
+	
+	.ft_timeline_event {
+		@include span-columns(2.52);
+		margin-right: 10px;
+		background-color: $white;
+		border-bottom: 1px solid #d7d7d7;
+		
+		@include media($tablet) {
+			@include span-columns(1.77);
+			margin-right: 5px;
+		}
+		
+		@include media($mobile) {
+			float: none;
+			width: 100%;
+			margin-bottom: 20px;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		
+		&:last-child {
+			margin-right: 0px;
+			
+			@include media($tablet) {
+				margin-right: 0px;
+			}
+		}
+		
+		.ft_timeline_content {
+			height: 220px;
+			
+			@include media($mobile) {
+				height: auto;
+				padding: 6px 15px 0 15px;
+			}
+		}
+		
+		img {
+			width: 100%;
+			height: auto;
+			
+			@include media($mobile) {
+				height: 100%;
+			}
+		}
+		
+		h3 {
+			@include garamond;
+			color: #978d7c;
+			font-weight: 400;
+			margin: 10px 0px 5px 0px;
+			padding-left: 10px;
+		}
+		
+		p {
+			padding: 0px 5px 20px 10px;
+			font-size: 15px;
+			
+			@include media($tablet){
+				font-size: 13px;
+			}
+			
+			@include media($mobile) {
+				padding-bottom: 16px;
+			}
+		}
+	}
+}
+
+.timeline {
+	overflow: hidden;
+	
+	.timeline_events {
+		@include clearfix;
+		list-style: none;
+		background: url('../images/timeline_line.png') repeat-y 34.5px 0;
+		margin-bottom: 30px;
+		
+		@include media($mobile){
+			margin-left: -32px;
+		}
+		
+		li {
+			@include clearfix;
+			@include span-columns(12);
+			padding-left: 70px;
+			padding-right: 70px;
+			background: url('../images/timeline_dot.png') no-repeat 34.5px 0;
+			margin-top: 20px;
+			margin-right: 0;
+			font-size: 15px;
+			
+			&:first-child {
+				margin-top: 0px;
+			}
+			
+			@include media($tablet){
+				padding-right: 0;
+			}
+			
+			@include media($mobile){
+				padding-left: 58px; 
+			}
+			
+			.timeline_event_wrap {
+				@include clearfix;
+				background: $white;
+				border-bottom: 1px solid #d7d7d7;
+				
+				@include media($mobile) {
+					background: none;
+					border-bottom: none;
+				}
+			}	
+			
+			.event_image {
+				@include span-columns(5);
+				
+				img {
+					width: 100%;
+					height: auto;
+					
+					@include media($mobile) {
+						display: none;
+					}
+				}
+			}
+			
+			.event_content {
+				@include span-columns(7);
+				background-color: $white;
+				padding: 30px 15px 0px 0px;
+				
+				@include media($tablet) {
+					padding: 20px 15px 20px 0px;
+				}
+				
+				@include media($mobile) {
+					@include span-columns(4);
+					background: none;
+					padding: 0 20px 0 0;
+				}
+				
+				h3 {
+					@include garamond;
+					color: #978d7c;
+					font-weight: 400;
+					margin-top: 0px;
+					margin-bottom: 10px;
+				}
+				
+				p {
+					@include media($tablet) {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+	
+	.load_more {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		
+		@include media($mobile){
+			margin: 0 0 0 5px;
+		}
+	}
+}

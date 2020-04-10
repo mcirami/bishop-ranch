@@ -1,0 +1,66 @@
+// general wrapper class
+.wrapper {
+	background-color: $lightGray;
+    padding-top: 30px;
+	padding-bottom: 40px;
+	
+	@include media($tablet){
+		min-width: 768px;
+	}
+	
+	@include media($mobile){
+		min-width: 320px;
+		padding-top: 10px;
+		padding-bottom: 0;
+	}
+}
+
+.container {
+	@extend %post;
+	max-width: 940px;
+	min-width: 940px;
+	
+	@include media($tablet){
+		max-width: 768px;
+		min-width: 768px;
+		padding: 0px 10px;
+	}
+	
+	@include media($mobile) {
+		padding: 0px 0.667em;
+		max-width: 600px;
+		min-width: 300px;
+	}
+
+	.content {
+		@include span-columns(8);
+		padding: 2rem 0;
+	}
+	.sidebar {
+		@include span-columns(4);
+		@include omega;
+		padding: 2rem 0;
+	}
+}
+
+.container-880 {
+	@extend %post;
+	max-width: 880px;
+	
+	@include media($tablet){
+		max-width: 708px;
+	}
+	
+	@include media($mobile) {
+		padding: 0px 10px;
+	}
+}
+
+.container-850 {
+	@extend %post;
+	max-width: 850px;
+	
+	@include media($mobile) {
+		padding: 0px 10px;
+	}
+}

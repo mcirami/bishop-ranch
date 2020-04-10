@@ -1,0 +1,372 @@
+.single_listing {
+	
+	@include media($mobile) {
+		padding-top: 10px;
+		padding-bottom: 24px;
+	}
+	
+	.single_nav {
+		@include clearfix;
+		border-bottom: 1px solid #dcdcdc;
+		
+		@include media($tablet) {
+				font-size: 13px;
+			}
+		
+		.listing_search {
+			@include span-columns(12);
+			margin-bottom: 20px;
+			display: table;
+			
+			@include media($mobile) {
+				margin-bottom: 0;
+			}
+		}
+		
+		.availability_form {
+			@include clearfix;
+			@include span-columns(8);
+			padding: 20px;
+			border: 1px solid $buttonGreen;
+			background-color: $white;
+			display: table-cell;
+			float: none;
+			
+			@include media($mobile){
+				@include span-columns(4);
+				margin-bottom: 20px;
+			}
+		
+			h3 {
+				@include proximaNovaLight;
+				font-size: 16px;
+				margin: 0;
+			}
+			
+			p {
+				@include proximaNovaLight;
+				margin-top: 10px;
+				margin-bottom: 5px;
+			}
+			
+			.dd-container {
+				clear: none;
+			}
+			
+			#home_sqft {
+				width: 35% !important;
+				margin-right: 1%;
+				margin-bottom: 0;
+				
+				li {
+					width: 100%;
+				}
+				
+				@include media($mobile) {
+					width: 100% !important;	
+					margin-bottom: 20px;
+				}
+			}
+			
+			#home_complex {
+				width: 35% !important;
+				margin-left: 1%;
+				margin-right: 3%;
+				margin-bottom: 0;
+				
+				li {
+					width: 100%;
+				}
+				
+				@include media($mobile) {
+					width: 100% !important;
+					margin: 0 0 20px;
+				}
+			}
+			
+			button {
+				@include clearfix;
+				@include proximaNovaLight;
+				border: 0px;
+				background-color: $buttonGreen;
+				border-radius: 0px;
+				color: $white;
+				padding: 8px 35px 8px 35px;
+				font-size: 16px;
+				width: 25%;
+				
+				@include media($mobile){
+					padding: 8px 20px 8px 20px;
+					width: 100%;
+				}
+			}
+		}
+		
+		.search_divider {
+			width: 2.35765%;
+		}
+		
+		.availability_pages {
+			@include clearfix;
+			@include span-columns(4);
+			padding: 20px;
+			border: 1px solid $buttonGreen;
+			background-color: $white;
+			text-align: center;
+			height: 100%;
+			display: table-cell;
+			float: none;
+			
+			@include media($tablet) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			
+			@include media($mobile){
+				display: none;
+			}
+						
+			a {
+				border-right: 1px solid $buttonGreen;
+				padding: 0 10px;
+				font-size: 15px;
+				
+				@include media($tablet) {
+					font-size: 13px;
+				}
+				
+				&:first-child {
+					padding-left: 0;
+				}
+				
+				&:last-child {
+					padding-right: 0;
+					border: 0;
+				}
+			}
+		}
+		
+		ul {
+			@include clearfix;
+			list-style: none;
+			padding-bottom: 15px;
+			
+			li {
+				float: left;
+			}
+		}
+		
+		.left {
+			@include span-columns(8.8);
+			
+			@include media($tablet) {
+				@include span-columns(5.3);
+			}
+			
+			@include media($mobile){
+				//@include span-columns(4);
+				display: none;
+			}
+		}
+		
+		.right {
+			@include span-columns(3.2);
+			
+			@include media($tablet) {
+				@include span-columns(2.7);
+			}
+			
+			@include media($mobile){
+				@include span-columns(4);
+			}
+			
+			li {
+				float: left;
+				
+				&:last-child {
+					float: right;
+				}
+			}
+		}
+	}
+	
+	.info_wrap {
+		@include clearfix;
+		margin-bottom: 20px;
+	
+		.listing_info {
+			@include span-columns(9);
+			
+			@include media($tablet) {
+				@include span-columns(5.82);
+				margin-right: 18px;
+			}
+			
+			@include media($mobile){
+				@include span-columns(4);
+			}
+			
+			.page_title {
+				//margin-top: 24px;
+			}
+			
+			h1 {
+				margin: 40px 0 20px;
+				
+				@include media($mobile) {
+					margin: 15px 0 0;
+				}
+			}
+			
+			.address {
+				font-size: 15px;
+				
+				.address_divider {
+					margin: 0 10px;
+				}
+			}
+			
+			ul {
+				list-style: none;
+				
+				li {
+					float: left;
+					padding-right: 20px;
+					
+					&:last-child {
+						padding-right: 0px;
+						
+						&:after {
+							content: none;
+						}
+					}
+					
+					&:after {
+						content: '|';
+						left: 10px;
+						color: $buttonGreen;
+						position: relative;
+					}
+				}
+			}
+		}
+	
+		.brochure {
+			@include span-columns(3);
+			margin-top: 40px;
+			padding: 10px 10px 10px 30px;
+			color: $white;
+			background: url('../images/download_icon.png') $buttonGreen no-repeat 90% 50%;
+			
+			@include media($tablet) {
+				@include span-columns(2.25);
+				padding: 10px 10px 10px 15px;
+				font-size: 15px;
+			}
+			
+			@include media($mobile){
+				@include span-columns(2.2);
+				margin-top: 20px;
+				margin-bottom: 5px;
+			}
+			
+			a {
+				color: $white;
+				width: 100%;
+			}
+		}
+	}
+	
+	.listing_hero {
+		background-color: $white;
+		margin-bottom: 25px;
+		border-bottom: 1px solid #dcdcdc;
+		
+		@include media($mobile) {
+			margin-bottom: 0;
+		}
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+		p {
+			padding: 10px 0px 10px 20px;
+		}
+	}
+	
+	.features {
+		
+		.next-prev {
+			
+			@include media($tablet) {
+				//width: 70%;
+				//margin-left: 30%;
+			}
+		}
+		
+		.avail_info {
+			
+			&.available_spaces {
+				
+				@include media($mobile) {
+					margin-bottom: 5px;
+					padding-top: 0;
+				}
+				
+				.right_content {
+					
+					@include media($mobile) {
+						padding-bottom: 0;
+					}
+				}
+			}
+			
+			&.available_listings {
+				
+				@include media($mobile) {
+					margin-bottom: 0;
+				}
+				
+				.right_content {
+					
+					@include media($mobile) {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+		
+		
+		&.leasing_info {
+			
+			@include media($mobile) {
+				margin-top: 0;
+			}
+			
+			.right_content {
+				
+				@include media($mobile) {
+					padding-bottom: 0;
+				}
+			}
+		} 
+	}
+}
+
+.mobile_header {
+	display: none;
+	
+	@include media($mobile) {
+		display: block;
+	}
+}
+
+.mobile_left {
+	display: none;
+	
+	@include media($mobile) {
+		display: block;
+	}
+}

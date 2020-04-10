@@ -1,0 +1,39 @@
+.page_404 {
+	
+	.container {
+		
+		.content {
+			@include span-columns(12);
+			padding: 150px 0;
+			
+			.post {
+				text-align: center;
+				
+				h1 {
+					font-weight: bold;
+				}
+				
+				.entry-content {
+					
+					form {
+						margin-top: 10px;
+						
+						label {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.error404 {
+	
+	.site_footer {
+		
+		.breadcrumbs {
+			display: none;
+		}
+	}
+}

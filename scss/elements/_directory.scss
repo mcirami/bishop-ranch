@@ -1,0 +1,221 @@
+.business_wrap {
+	background: $white;
+	
+	.featured_business {
+		@include clearfix;
+		list-style: none;
+		padding: 10px;
+		
+		li {
+			@include span-columns(1.7142857143);
+			margin-bottom: 10px;
+			
+			&:nth-child(7n) {
+				margin-right: 0px;
+			}
+			
+			@include media($mobile){
+				@include span-columns(1.3333333333);
+				
+				&:nth-child(3n) {
+					margin-right: 0px;
+				}
+				
+				&:nth-child(7n) {
+					margin-right: 7.42297%;
+				}
+			}
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+			
+			&.leftover_spaces {
+				@include span-columns(1.7142857143);
+				background-color: #f8f8f8;
+				padding-top: 11.7%;
+				
+				@include media($mobile){
+					@include span-columns(1.3333333333);
+					padding-top: 27%;
+					
+					&:nth-child(3n) {
+						margin-right: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.business_sort {
+	
+	@include media($mobile){
+		overflow: hidden;
+	}
+
+	.business_form {
+		@include clearfix;
+		@include span-columns(12);
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border: 1px solid $buttonGreen;
+		background-color: $white;
+		padding: 15px;
+		
+		.dd-container {
+			float: left;
+			display: inline-block;
+		    border: 0 none;
+		    width: 33% !important;
+		    margin: 4px 20px 0 0;
+		    margin-right: 20px;
+		    color: $textGray;
+		    clear: none !important;
+		    
+		    @include media($mobile){
+		    	float: none;
+		    	width: 100% !important;
+		    }
+		    
+		    .dd-option {
+			    
+			    @include media($tablet) {
+			    	font-size: 13px;
+			    }
+		    }
+		    
+		    .dd-select {
+		
+				.dd-selected {
+					
+					@include media($tablet) {
+						padding-left: 8px !important;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+		
+		.standard_btn {
+			float: left;
+			display: inline-flex;
+			width: 20%;
+			text-align: center;
+			
+			@include media($mobile){
+				float: none;
+				width: 100%;
+				margin-top: 5px;
+			}
+			
+			a {
+				width: 100%;
+			}
+		}
+	}
+	
+	.letter_slider {
+		display: none;
+		
+		@include media($mobile){
+			display: block;
+		}
+	}
+	
+	.directory_nav {
+		display: none;
+		
+		@include media($mobile){
+			display: block;
+			position: absolute;
+			top: 210px;
+			width: 100%;
+		}
+		
+		.directory_right {
+			position: absolute;
+			z-index: 2;
+			right: 0;
+		}
+		
+		.directory_left {
+			position: absolute;
+			z-index: 2;
+		}
+	}
+		
+	> ul {
+		@include clearfix;
+		clear: both;
+		list-style: none;
+		
+		@include media($mobile){
+			display: none;
+		}
+		
+		li {
+			float: left;
+			padding-left: 21px;
+			
+			@include media($tablet){
+				padding-left: 13.5px;
+			}
+			
+			&:first-child {
+				padding-left: 0px;
+			}
+			
+			a {
+				font-size: 22px;
+				color: $textGray;
+				text-transform: uppercase;
+				
+				&:active {
+					color: $buttonGreen;
+				}
+				
+				&:hover {
+					color: $buttonGreen;
+				}
+				
+				&.current_alpha {
+					color: $buttonGreen;
+				}
+			}
+			
+			p {
+				color: $borderGray;
+				cursor: default;
+				font-size: 22px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.business_listing {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	
+	@include media($mobile){
+		padding-bottom: 0;
+		padding-left: 8px;
+	}
+	
+	ul {
+		list-style: none;
+		
+		li {
+			
+			a {
+				
+			}
+		}
+		
+		.hidden_content {
+			display: none;
+		}
+	}
+}

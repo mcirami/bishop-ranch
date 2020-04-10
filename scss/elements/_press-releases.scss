@@ -1,0 +1,150 @@
+.press_release_wrap {
+	@include clearfix;
+	background-color: $white;
+	padding: 30px;
+	
+	@include media($mobile) {
+		margin-bottom: 25px;
+		padding: 20px 10px 0;
+		
+	}
+	
+	.press_release {
+		@include clearfix;
+		margin-bottom: 30px;
+		
+		@include media($mobile) {
+			margin-bottom: 20px;
+		}
+		
+		.pr_image {
+			@include span-columns(6);
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				margin-bottom: 20px;
+			}
+			
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		
+		.pr_content {
+			@include span-columns(6);
+			margin-right: 0px;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+			
+			p {
+				color: $textGray;
+				
+				&.date {
+					margin-bottom: 20px;
+					font-size: 15px;
+					
+					@include media($mobile) {
+						margin-bottom: 10px;
+					}
+				}
+			}
+			
+			.read_full {
+				margin-top: 20px;
+				display: inline-block;
+				color: $buttonGreen;
+				
+				@include media($mobile) {
+					margin-top: 10px;
+				}
+			}
+			
+			h2 {
+				@include proximaNovaLight;
+				font-weight: 100;
+				font-size: 22px;
+				margin-bottom: 20px;
+				
+				@include media($mobile) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	
+	.pagination {
+		
+		ul {
+			list-style: none;
+			
+			li {
+				float: left;
+				padding-left: 10px;
+				
+				&.active {
+					
+					a {
+						color: $buttonGreen;
+					}
+				}
+				
+				a {
+					color: $textGray;
+					
+					&:hover {
+						color: $buttonGreen;
+					}
+				}
+			}
+		}
+	}
+}
+
+.search_content {
+  padding-bottom: 30px;
+}
+
+.press_release {
+	
+	.single_post {
+			
+		@include media($mobile) {
+			@include span-columns(4);
+			padding-bottom: 0 0 10px 0;
+		}
+		
+		.post_content {
+			@include span-columns(12);
+			@include shift(0);
+			
+			@include media($mobile) {
+				width: 100%;
+			}
+			
+			.press_content {
+				@include span-columns(12);
+				@include shift(0);
+				
+				img {
+					
+					@include media($mobile) {
+						width: 100%;
+						height: auto;
+						display: block;
+					}
+				}	
+			}
+			
+			.tags_border {
+				
+				@include media($mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+}
